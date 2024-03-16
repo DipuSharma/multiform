@@ -255,6 +255,8 @@
 <script>
 import { useFormStore } from '../store';
 import ImageButton from './ImageButton';
+const store = useFormStore();
+console.log("store_____________________", store);
 export default {
   data() {
     return {
