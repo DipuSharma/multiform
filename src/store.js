@@ -1,25 +1,26 @@
-// store.js
 import { defineStore } from 'pinia';
-import {ref, computed} from 'vue';
-
-export const useFormStore = defineStore('form', {
+export const useFormStore = defineStore('record', {
   state: () => ({
-    formData: {
-      firstName: '',
-      lastName: '',
-      email: '',
-    },
+    formData: {},
+    userFormData: {},
     currentStep: 1,
   }),
+  getters: {
+    totalCount(){
+      return this.currentStep
+    }
+  },
   actions: {
     nextStep() {
       this.currentStep++;
+      console.log('currentStep', this.currentStep);
     },
     prevStep() {
       this.currentStep--;
     },
     setFormData(data) {
       this.formData = { ...this.formData, ...data };
+      this.userFormData = { ...this.userFormData, ...data };
     },
     resetForm() {
       this.formData = {};

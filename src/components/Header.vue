@@ -4,7 +4,8 @@
         <v-toolbar-title style="color: black;">My App</v-toolbar-title>
         <v-spacer></v-spacer>
         <!-- Add any additional header content here -->
-        <h5 style="color: black;" class="ml-auto mr-10">Login</h5>
+        <v-btn style="color: black;" class="ml-auto mr-10">Login</v-btn>
+
         
     </v-app-bar>
 </template>
@@ -17,4 +18,11 @@ export default {
 
 <style scoped>
 /* Add any custom styles for the header */
+.v-btn {
+    border-radius: 20px !important;
+    background-color: white !important;
+    color: #146CC9 !important;
+    border-color: #146CC9 !important;
+    border: 2px solid black;
+}
 </style>
