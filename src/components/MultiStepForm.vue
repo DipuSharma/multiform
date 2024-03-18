@@ -190,8 +190,7 @@
           <!-- Model Design -->
           <v-dialog v-model="dialog" width="auto" class="mt-15">
             <v-container>
-              <v-card prepend-icon="mdi-home" title="Add User" class="mx-auto my-8"
-                style="background-color: white; color: black; width: 800px;">
+              <v-card prepend-icon="mdi-home" title="Add User" class="mx-auto my-8 user-model">
                 <template v-slot:actions class="text-center justify-center">
                   <v-btn class="close-btn ms-auto" text="Close" @click="dialog = false"></v-btn>
                 </template>
@@ -376,7 +375,7 @@ export default {
       nextStep,
       prevStep,
       submitForm,
-      
+
     };
   },
 
@@ -397,5 +396,28 @@ export default {
   color: #146CC9 !important;
   border-color: #146CC9 !important;
   border: 2px solid black;
+}
+
+.user-model {
+  width: 800px;
+  background-color: white;
+  color: black;
+}
+
+@media screen and (max-width: 500px) {
+  .user-model {
+    width: 350px;
+    background-color: white;
+    color: black;
+    margin-top: -100px;
+  }
+}
+@media screen and (max-width: 700px) {
+  .user-model {
+    width: 600px;
+    background-color: white;
+    color: black;
+    margin-top: -100px;
+  }
 }
 </style>
