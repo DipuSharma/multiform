@@ -4,5 +4,5 @@ Check your node version 20
 
 
 ## Run Command
-1. pip install
+1. npm install or npm i
 2. npm run dev
